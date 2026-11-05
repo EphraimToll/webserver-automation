@@ -1,2 +1,3 @@
 .test.cfg
-reports/reports.csv
+reports
+reports.csv
