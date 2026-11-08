@@ -1,2 +1,7 @@
 test.cfg
 reports
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+config.json 
+
