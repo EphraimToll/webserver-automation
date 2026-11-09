@@ -15,5 +15,6 @@ resource "local_file" "json_config"{
         nginx_version = var.nginx_version
         protocol = var.protocol
     })
-    filename = "${path.module}/../config.json"
+    filename = "${path.module}/${var.json_path}"
 }
+

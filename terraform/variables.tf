@@ -15,3 +15,11 @@ variable "protocol" {
   default     = "http"
   type        = string
 }
+
+
+variable "json_path" {
+  description = "Path to the generated JSON configuration file"
+  default     = "../config.json"
+  type        = string
+  
+}
