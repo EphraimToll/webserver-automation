@@ -16,9 +16,9 @@
         state: started
         enabled: true
 
-    - name: Copy Nginx configuration file
+    - name: Copy html file to webserver
       ansible.builtin.copy:
-        src: /home/ephra/webserver-automation/web/webserver.html
-        dest: /var/www/html/index.nginx-debian.html
+        src: ./web/webserver.html
+        dest: /var/www/html/index.html
       
 
