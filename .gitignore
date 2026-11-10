@@ -4,4 +4,3 @@ reports
 terraform.tfstate
 terraform.tfstate.backup
 config.json 
-
