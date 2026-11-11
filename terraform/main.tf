@@ -11,7 +11,7 @@ provider "local" {}
 
 resource "local_file" "json_config"{
     content = jsonencode({
-       # port = var.port, 
+        port = var.webserver_port,
         nginx_version = var.nginx_version
         protocol = var.protocol
     })

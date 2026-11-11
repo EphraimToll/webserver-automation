@@ -16,9 +16,19 @@
         state: started
         enabled: true
 
+    - name: Creating a user
+      ansible.builtin.user:
+        name: webuser
+        system: true
+        create_home: false
+        shell: /usr/sbin/nologin
+
     - name: Copy html file to webserver
       ansible.builtin.copy:
         src: ./web/webserver.html
         dest: /var/www/html/index.html
+        owner: webuser
+        group: webuser
+        mode: '0644'
       
 

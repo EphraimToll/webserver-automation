@@ -4,11 +4,11 @@ variable "nginx_version" {
   type        = string
 }
 
-#variable "port" {
- # description = "The port on which Nginx will listen"
- # default     = 80
- # type        = number
-# }
+variable "webserver_port" {
+  description = "The port on which Nginx will listen"
+  default     = 80
+  type        = number
+ }
 
 variable "protocol" {
   description = "The protocol to use for Nginx"
