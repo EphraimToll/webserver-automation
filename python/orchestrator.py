@@ -27,10 +27,20 @@ def read_config(config_file):
         config = json.load(f)
     return config
 
+def run_ansible_playbook():
+    # Path setup
+    python_file = os.path.dirname(os.path.abspath(__file__))
+    dir_for_root = os.path.dirname(python_file)
+    print(dir_for_root)
+   
+    # Run the Ansible playbook with -K for sudo password prompt
+    subprocess.run(['ansible-playbook', 'webservers.yml', '-K'], check=True, cwd=dir_for_root)
+    
 
 if  __name__ == "__main__":
   
     path_to_json_file = run_terraform()
     config_file_value = read_config(config_file=path_to_json_file)
+    run_ansible_playbook()
     print(f"Opened config file: {config_file_value}")
     print(f"Path to JSON file: {path_to_json_file}")
